@@ -1,6 +1,7 @@
 import os
 
 def remove_prefix(folder_path):
+
     if not os.path.isdir(folder_path):
         print("O caminho fornecido não é uma pasta.")
         return
@@ -14,6 +15,6 @@ def remove_prefix(folder_path):
             os.rename(old_filepath, new_filepath)
             print(f"Renomeado: {filename} -> {new_filename}")
 
-folder_path = "/caminho/da/sua/pasta"
+folder_path = input("Digite o caminho da pasta: ")
 
 remove_prefix(folder_path)
